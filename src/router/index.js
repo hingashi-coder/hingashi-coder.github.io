@@ -1,15 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-
+import top from '../Top.vue'
+import VueParticles from 'vue-particles'
+import VuePrlx from 'vue-prlx'
+import loading from '../components/loading.vue'
+Vue.use(VueParticles)
 Vue.use(Router)
-
+Vue.use(VuePrlx)
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      component: loading
+    },
+    {
+      path: '/main',
+      component: top
     }
   ]
 })
