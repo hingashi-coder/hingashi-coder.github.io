@@ -49,6 +49,9 @@
     height:120px !important;
     .title{
       font-size:45px !important;
+      background: white !important;
+      -webkit-background-clip: text !important;//テキストでくり抜く
+      -webkit-text-fill-color: transparent !important;//くり抜いた部分は背景を表示
     }
   }
   .header{
@@ -72,10 +75,12 @@
           font-size:30px;
           letter-spacing: 2.5px;
           margin-left :5vw;
+          background: linear-gradient(to left,rgb(0, 179, 0),greenyellow);
+          -webkit-background-clip: text;//テキストでくり抜く
+          -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
           &:hover{
             -webkit-animation: fuwafuwa 3s infinite linear alternate;
             animation: fuwafuwa 3s infinite linear alternate;
-
           }
         }
       }
