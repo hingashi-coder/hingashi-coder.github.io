@@ -4,6 +4,8 @@
       <topBar></topBar>
       <bg></bg>
       <jobs></jobs>
+      <who></who>
+      <contact></contact>
       <Footer></Footer>
     </div>
   </transition>
@@ -13,13 +15,18 @@ import bg from './components/backgroundP.vue'
 import jobs from './components/jobs.vue'
 import topBar from './components/topBar.vue'
 import Footer from './components/footer.vue'
+import who from './components/who we are.vue'
+import contact from './components/contact.vue'
+
 export default {
   name: 'App',
   components: {
     bg,
     jobs,
     topBar,
-    Footer
+    Footer,
+    who,
+    contact
   }
 }
 </script>

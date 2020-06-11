@@ -1,5 +1,5 @@
 <template>
-  <div style="overflow:hidden">
+  <div id="bg" style="overflow:hidden">
     <div class="dummy">
     </div>
     <div class="background">
@@ -45,7 +45,7 @@ export default {
     z-index: -1;
   }
   #catch{
-    height:40vh;
+    height:36vh;
     padding-right: 10vw;
     text-align: right;
     color:white;

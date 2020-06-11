@@ -17,16 +17,15 @@ export default{
     margin:0;
   }
   .fade-enter-active, .fade-leave-active {
-   animation: SlideIn 1.6s;
+    animation: SlideOut 0.8s;
   }
-  .fade-enter, .fade-leave-to {
-    opacity: 0
+  .fade-enter {
   }
   /* CSSアニメーションの設定 */
-  @keyframes SlideIn {
+  @keyframes SlideOut {
     100% {
-      opacity: 0;/*初期状態では透明に*/
-      transform: translateX(300px);
+      opacity: 0.9;/*初期状態では透明に*/
+      transform: translateX(100vw);
     }
     0% {
       opacity: 1;
