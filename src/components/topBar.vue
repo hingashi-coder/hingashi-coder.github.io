@@ -2,21 +2,21 @@
   <div>
     <div :class="`header ${headerState}`">
       <div class='row'>
-        <div class='col-6'>
+        <div class='col-5'>
           <div class='title' v-scroll-to="{ el :'#bg'}">
             Engage
           </div>
         </div>
-        <div class="col-6" id="buttons">
-          <div class="row">
-            <div class="col scrollbtn">
+        <div class="col-7" id="buttons">
+          <div :class="`row ${buttonState}`">
+            <div class="col-3 scrollbtn">
               <div v-scroll-to="{ el :'#jobs', offset: -100}" ><p>Jobs</p></div>
             </div>
-            <div class="col scrollbtn">
+            <div class="col-3 scrollbtn">
               <div v-scroll-to="{ el :'#whoweare', offset: -100}" class=""><p>Who</p></div>
             </div>
-            <div class="col scrollbtn">
-              <div v-scroll-to="{ el :'#contact', offset: -100}" class="scrollbtn"><p>contact</p></div>
+            <div class="col-3 scrollbtn">
+              <div v-scroll-to="{ el :'#contact', offset: -100}" class=""><p>contact</p></div>
             </div>
           </div>
         </div>
@@ -36,8 +36,11 @@
     &:hover{
       transition-duration: 0.5s;
       color:greenyellow;
-      font-size:18px;
     }
+  }
+  .blackButton{
+    transition-duration: 0.5s;
+    color:black;
   }
   .trans{
     background:transparent !important;
@@ -60,7 +63,7 @@
     transition-duration: 0.5s;
     .row{
       height: 100%;
-      .col-6{
+      [class*="col-"]{
         height: 100%;
         display: flex;
         align-items: center;
@@ -80,9 +83,7 @@
   }
   #buttons{
     flex-direction: row-reverse;
-    padding-right:30px;
-    padding-left:0;
-
+    padding:0;
   }
   @-webkit-keyframes fuwafuwa {
   0% {
@@ -114,15 +115,18 @@ export default {
   },
   data () {
     return {
-      headerState: 'trans'
+      headerState: 'trans',
+      buttonState: 'blackButton'
     }
   },
   methods: {
     handleScroll () {
       if (window.scrollY > 5) {
         this.headerState = ''
+        this.buttonState = ''
       } else if (window.scrollY < 150) {
         this.headerState = 'trans'
+        this.buttonState = 'blackButton'
       }
     }
   }
