@@ -3,30 +3,25 @@
     <div>
       <topBar></topBar>
       <bg></bg>
-      <jobs></jobs>
-      <who></who>
-      <contact></contact>
+      <transition mode="out-in" name="fade">
+        <router-view>
+        </router-view>
+      </transition>
       <Footer></Footer>
     </div>
   </transition>
 </template>
 <script>
 import bg from './components/backgroundP.vue'
-import jobs from './components/jobs.vue'
-import topBar from './components/topBar.vue'
 import Footer from './components/footer.vue'
-import who from './components/who we are.vue'
-import contact from './components/contact.vue'
+import topBar from './components/topBar.vue'
 
 export default {
-  name: 'App',
+  name: 'Top',
   components: {
     bg,
-    jobs,
-    topBar,
     Footer,
-    who,
-    contact
+    topBar
   }
 }
 </script>
@@ -47,5 +42,22 @@ export default {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+  }
+  .fade-enter-active{
+    transition: all 0.5s 0s ease;
+  }
+  .fade-leave-active{
+    animation: Slideout 0.5s;
+  }
+  .fade-enter, .fade-leave-to {
+    transition: all 0.5s 0s ease;
+  }
+@keyframes SlideOut {
+    0% {
+      opacity: 0;/*初期状態では透明に*/
+    }
+    110% {
+      opacity: 1;
+    }
   }
 </style>

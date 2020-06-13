@@ -10,13 +10,15 @@
         <div class="col-7" id="buttons">
           <div :class="`row ${buttonState}`">
             <div class="col-3 scrollbtn">
-              <div v-scroll-to="{ el :'#jobs', offset: -100}" ><p>Jobs</p></div>
+              <router-link tag="div" to="/main">
+                <p>Top</p>
+              </router-link>
             </div>
+
             <div class="col-3 scrollbtn">
-              <div v-scroll-to="{ el :'#whoweare', offset: -100}" class=""><p>Who</p></div>
-            </div>
-            <div class="col-3 scrollbtn">
-              <div v-scroll-to="{ el :'#contact', offset: -100}" class=""><p>contact</p></div>
+              <router-link tag="div" :to="{name: 'blog'}">
+                <p>Blog</p>
+              </router-link>
             </div>
           </div>
         </div>
