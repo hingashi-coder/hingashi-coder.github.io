@@ -49,13 +49,13 @@ export default {
     margin: 5% 10%;
   }
   .blog_title{
-    height:5vh;
     width:100%;
     background:linear-gradient(to right, green, greenyellow);
     color:white;
     display: flex;
     align-items: center;
     padding-left:10px;
+    font-size:inherit;
   }
   .blog_card{
     padding:10px;
